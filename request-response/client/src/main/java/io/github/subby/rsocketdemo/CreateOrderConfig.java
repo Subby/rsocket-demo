@@ -18,17 +18,27 @@ public class CreateOrderConfig {
     @Bean
     public ApplicationRunner applicationRunner(RSocketRequester.Builder requesterBuilder) {
         return args -> {
-            RSocketRequester requester = requesterBuilder.tcp("localhost", 7000);
+            var requester = requesterBuilder.tcp("localhost", 7000);
 
             requester
-                    .route("")
-                    .data(new Order(
-                            "John Cena",
-                            List.of(new Product("Battery"), new Product("TV"))
-                    ))
+                    .route("createOrder")
+                    .data(newOrder())
                     .retrieveMono(Order.class)
-                    .subscribe(response -> log.info("Received reponse: {}", response));
+                    .subscribe(response -> log.info("Received order create response: {}", response));
+
+            requester
+                    .route("getOrder/{id}", "2")
+                    .data(newOrder())
+                    .retrieveMono(Order.class)
+                    .subscribe(response -> log.info("Received order get response: {}", response));
         };
+    }
+
+    private Order newOrder() {
+        return new Order(
+                "John Cena",
+                List.of(new Product("Battery"), new Product("TV"))
+        );
     }
 
 }
