@@ -1,0 +1,4 @@
+spring:
+  rsocket:
+    server:
+      port: 7000 # If this value exists, Spring understands that this is a RSocket server

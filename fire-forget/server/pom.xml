@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.github.subby</groupId>
-    <artifactId>rsocket-request-response-client</artifactId>
+    <artifactId>rsocket-fire-forget-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>request-response-client</name>
-    <description>request-response-client</description>
+    <name>fire-forget-server</name>
+    <description>fire-forget-server</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -22,13 +22,10 @@
             <artifactId>spring-boot-starter-rsocket</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,14 +44,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>

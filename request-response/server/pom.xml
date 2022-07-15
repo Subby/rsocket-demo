@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.github.subby</groupId>
-    <artifactId>rsocket-request-response-client</artifactId>
+    <artifactId>rsocket-request-response-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>request-response-server</name>
-    <description>rsocket-demo</description>
+    <description>request-response-server</description>
     <properties>
         <java.version>17</java.version>
     </properties>
