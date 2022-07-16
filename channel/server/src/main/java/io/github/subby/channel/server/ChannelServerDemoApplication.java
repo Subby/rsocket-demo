@@ -1,13 +1,13 @@
-package io.github.subby.fireforget.server;
+package io.github.subby.channel.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RequestStreamServerDemoApplication {
+public class ChannelServerDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RequestStreamServerDemoApplication.class, args);
+        SpringApplication.run(ChannelServerDemoApplication.class, args);
     }
 
 }

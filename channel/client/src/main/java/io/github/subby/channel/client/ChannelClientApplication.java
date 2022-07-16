@@ -1,13 +1,13 @@
-package io.github.subby.fireforget.client;
+package io.github.subby.channel.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RequestStreamClientApplication {
+public class ChannelClientApplication {
 
     public static void main(String[] args) throws InterruptedException {
-        SpringApplication.run(RequestStreamClientApplication.class, args);
+        SpringApplication.run(ChannelClientApplication.class, args);
         Thread.sleep(15000);
     }
 

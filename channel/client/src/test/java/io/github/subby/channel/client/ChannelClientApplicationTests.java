@@ -1,10 +1,10 @@
-package io.github.subby.fireforget.server;
+package io.github.subby.channel.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RsocketDemoApplicationTests {
+class ChannelClientApplicationTests {
 
     @Test
     void contextLoads() {
