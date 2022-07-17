@@ -25,7 +25,9 @@ public class OrderRequestResponseController {
 
     @MessageMapping("getOrder/{id}")
     public Mono<Order> handleOrderFetching(@DestinationVariable("id") String id) {
-        return orderRepository.doOnNext(order -> log.info("Received get order request: {}", order)).fetchOrder(id);
+        return orderRepository
+                .fetchOrder(id)
+                .doOnNext(order -> log.info("Received get order request: {}", order));
     }
 
 }
